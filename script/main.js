@@ -50,8 +50,8 @@ var wood = items.filter(function(test){
 console.log(wood);
 
 wood.forEach(function(name){
-  console.log(name);
-})
+  console.log(name.title + " is made of wood.");
+});
 
 //5.
 var moreMaterials = items.filter (function(test){
@@ -70,7 +70,4 @@ var sellersMade = items.filter (function(test){
 });
 
 console.log(sellersMade);
-
-sellersMade.forEach(function(name){
-  console.log(name);
-})
+console.log(sellersMade.length + " items were made by their sellers.");
