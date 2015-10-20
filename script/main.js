@@ -36,11 +36,7 @@ var glassPitcher = items.filter(function(currency){
 })
 
 console.log(glassPitcher);
-console.log(glassPitcher[0].title);
-
-glassPitcher.forEach(function(name){
-  console.log(name);
-})
+console.log(glassPitcher[0].title + " costs £" + glassPitcher[0].price );
 
 //4.
 var wood = items.filter(function(test){
@@ -61,8 +57,9 @@ var moreMaterials = items.filter (function(test){
 console.log(moreMaterials);
 
 moreMaterials.forEach(function(name){
-  console.log(name);
-})
+  console.log(name.title + " has " + name.materials.length + " materials." , "Materials: " + name.materials);
+
+});
 
 //6.
 var sellersMade = items.filter (function(test){
@@ -70,4 +67,4 @@ var sellersMade = items.filter (function(test){
 });
 
 console.log(sellersMade);
-console.log(sellersMade.length + " items were made by their sellers.");
+console.log(sellersMade.length + " items were made by their sellers");
