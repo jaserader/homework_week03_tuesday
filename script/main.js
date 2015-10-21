@@ -19,7 +19,7 @@ var avg = total/numberItems;
 
 console.log(avg.toFixed(2));
 
-//2.
+//2. Items Between $14 - $18
 var between = items.filter(function(element){
     return(element.price > 14.00 && element.price < 18.00);
 })
@@ -30,7 +30,7 @@ between.forEach(function(name){
   console.log(name);
 })
 
-//3.
+//3. Items with a different currency than USD
 var glassPitcher = items.filter(function(currency){
   return currency.currency_code === "GBP";
 })
@@ -38,7 +38,7 @@ var glassPitcher = items.filter(function(currency){
 console.log(glassPitcher);
 console.log(glassPitcher[0].title + " costs £" + glassPitcher[0].price );
 
-//4.
+//4. Items made of wood
 var wood = items.filter(function(test){
   return test.materials.indexOf('wood') != -1;
 })
@@ -49,8 +49,8 @@ wood.forEach(function(name){
   console.log(name.title + " is made of wood.");
 });
 
-//5.
-var moreMaterials = items.filter (function(test){
+//5. Items made with more than 8 materials and their materials list
+var moreMaterials = items.filter(function(test){
   return test.materials.length >= 8;
 });
 
@@ -61,10 +61,9 @@ moreMaterials.forEach(function(name){
 
 });
 
-//6.
+//6. Items made by their seller
 var sellersMade = items.filter (function(test){
   return test.who_made.indexOf('i_did') != -1;
 });
 
-console.log(sellersMade);
 console.log(sellersMade.length + " items were made by their sellers");
